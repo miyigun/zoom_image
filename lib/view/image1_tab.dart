@@ -51,8 +51,8 @@ class _Image1TabState extends State<Image1Tab>
   }
 
   Widget buildImage() => GestureDetector(
-        onTapDown: (details) => tapDownDetails = details,
-        onTap: () {
+        onDoubleTapDown: (details) => tapDownDetails = details,
+        onDoubleTap: () {
           final position = tapDownDetails!.localPosition;
 
           const double scale = 5;
@@ -81,7 +81,7 @@ class _Image1TabState extends State<Image1Tab>
           panEnabled: false,
           scaleEnabled: false,
           child: AspectRatio(
-            aspectRatio: 2,
+            aspectRatio: 1,
             child: Image.asset(
               "assets/image.jpg",
               fit: BoxFit.cover,
