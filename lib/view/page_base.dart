@@ -20,6 +20,7 @@ class _PageBaseState extends State<PageBase> {
         appBar: AppBar(
           title: Text(widget.title),
           bottom: const TabBar(
+            labelColor: Colors.yellow,
             tabs: [
               Tab(
                 text: 'Image 1',
